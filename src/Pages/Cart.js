@@ -89,7 +89,7 @@ const Cart = () => {
                 <button className="col-4" onClick={goToCheckout} style={{ backgroundColor: 'skyBlue', height: 50, padding: 10, borderRadius: 5, textAlign: "center", color: "white", fontSize: 20, fontWeight: 800, width: 300 }}>Buy Now</button>
             </div>
         </div> :
-            <h2>Cart is Empty...! Please select Products :)<a href="/"> Shop Now </a></h2>
+            <h2>Cart is Empty...! Please select Products :)<a href="/totalitycorp-frontend-challenge"> Shop Now </a></h2>
         }
 
     </>

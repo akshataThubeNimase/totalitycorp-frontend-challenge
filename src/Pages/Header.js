@@ -30,11 +30,11 @@ const Header = () => {
         </h2>
       </div>
       <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/totalitycorp-frontend-challenge') ? 'white' : '' }} onClick={() => handleRouteChange('/totalitycorp-frontend-challenge')}> <AiOutlineHome size={30}/>    Home</div>
-      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/about') ? 'white' : '' }} onClick={() => handleRouteChange('/about')}>  <FcAbout size={30} />    About</div>
-      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/contact') ? 'white' : '' }} onClick={() => handleRouteChange('/contact')}>  <FcCallback size={30} />  Contact</div>
-      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/cart') ? 'white' : '' }} onClick={() => handleRouteChange('/cart')}><BsFillCartPlusFill size={30} />  Cart</div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/about') ? 'white' : '' }} onClick={() => handleRouteChange('/about')}>  <FcAbout size={25} />    About</div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/contact') ? 'white' : '' }} onClick={() => handleRouteChange('/contact')}>  <FcCallback size={25} />  Contact</div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/cart') ? 'white' : '' }} onClick={() => handleRouteChange('/cart')}><BsFillCartPlusFill size={25} />  Cart</div>
       <div className="col-sm-1 col-md-2 col-lg-2"></div>
-      <div className="col-sm-1 col-md-1 col-lg-2 icon-item login" style={{backgroundColor:isActive('/login') ? 'white' : '' }} onClick={() => handleRouteChange('/login')}><AiOutlineLogin size={30} /></div>
+      <div className="col-sm-1 col-md-1 col-lg-2 icon-item login" style={{backgroundColor:isActive('/login') ? 'white' : '' }} onClick={() => handleRouteChange('/login')}><AiOutlineLogin size={25} /></div>
     </nav>
   </>
 
