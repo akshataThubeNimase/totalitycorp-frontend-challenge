@@ -32,7 +32,7 @@ const Cart = () => {
         for (let i = 0; i < cartData?.length; i++) {
             tempTotal += cartData[i].price * cartData[i].quantity;
         }
-        setTotal(tempTotal);
+        setTotal(tempTotal.toFixed(2));
     }, [cartData, location])
 
     const goToCheckout = () => {
