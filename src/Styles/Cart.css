@@ -1,0 +1,7 @@
+img {
+    padding: 5px;
+    object-fit:cover;
+    border-radius: 10px;
+    max-width: 70%;
+    resize:'content';
+}

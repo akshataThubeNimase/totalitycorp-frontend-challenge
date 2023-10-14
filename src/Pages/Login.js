@@ -1,7 +1,10 @@
 import React from "react";
 import '../Styles/Login.css';
+import { useNavigate } from "react-router-dom";
 
-const login = () => {
+const Login = () => {
+const navigation =useNavigate();
+
     return <>Login Page
         <div className="login-container">
             <form>
@@ -13,11 +16,11 @@ const login = () => {
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
                 </div><br />
-                <button type="submit" class="btn btn-primary">Login</button><br/>
+                <button type="submit" class="btn btn-primary" onClick={()=>navigation('/')}>Login</button><br/>
                 <a href="../register">Don't Have An Account?</a>
             </form>
         </div>
     </>
 
 }
-export default login;
+export default Login;

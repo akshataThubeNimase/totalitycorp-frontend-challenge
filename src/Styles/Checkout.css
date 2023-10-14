@@ -4,8 +4,8 @@
     border: 1px solid black;
     display: flex;
     max-width: fit-content;
-    padding: 100px;
-    margin-left: 500px;
+    margin:auto;
+    padding: 20px;
     margin-top: 10px;
     box-shadow: 2px;
     }
@@ -27,5 +27,7 @@
     .success{
         text-align: center;
         color: green;
+        font-weight: 700;
+        font-size: large;
 
     }

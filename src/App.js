@@ -22,7 +22,7 @@ function App() {
           <Header></Header>
 
     <Routes>
-      <Route path="/" element={<Home/>}></Route>
+      <Route path="/totalitycorp-frontend-challenge" element={<Home/>}></Route>
       <Route path="/about" element={<About/>}></Route>
       <Route path="/productList" element={<ProductList/>}></Route>
       <Route path="/contact" element={<Contact/>}></Route>

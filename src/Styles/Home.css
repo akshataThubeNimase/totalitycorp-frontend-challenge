@@ -11,8 +11,6 @@
 }
 
 .category-container {
-    width: 350px;
-    height: 400px;
     background-color: yellowgreen;
     margin: 30px;
     border-radius: 10px;
@@ -28,58 +26,15 @@
 }
 
 img {
-    width: 350px;
     padding: 5px;
-    object-fit: contain;
+    object-fit:cover;
     border-radius: 10px;
+    max-width: 100%;
+    resize:'content';
 }
 
 .home-p {
     text-align: center;
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.main-nav {
-    display: flex;
-    flex-direction: row;
-    background-color: chartreuse;
-    align-content: center;
-
-}
-
-.menu-link {
-    flex-direction: row;
-    font-weight: 200;
-}
-
-.menu-item {
-    padding-left: 50px;
-    margin: 10px;
-    /* background-color: white; */
-    border-color: bisque;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 800;
-}
-
-.icon-item {
-    padding-left: 60px;
-    margin: 10px;
-    /* background-color: white; */
-    border-color: bisque;
-    border-radius: 10px;
-    align-self: flex-end;
-    cursor: pointer;
-}
-
-.logo {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    color: blueviolet;
-    font-weight: 300;
-    font-style: italic;
-    text-align: center;
-    font-size:x-large;
 }

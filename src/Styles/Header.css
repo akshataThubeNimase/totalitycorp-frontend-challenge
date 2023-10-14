@@ -13,9 +13,9 @@
 }
 
 .menu-item {
-    padding-left: 50px;
+    padding: 10px;
     margin: 10px;
-    /* background-color: white; */
+    text-align: left;
     border-color: bisque;
     border-radius: 10px;
     cursor: pointer;
@@ -23,9 +23,8 @@
 }
 
 .icon-item {
-    padding-left: 60px;
+    padding: 10px;
     margin: 10px;
-    /* background-color: white; */
     border-color: bisque;
     border-radius: 10px;
     align-self: flex-end;
@@ -40,4 +39,8 @@
     font-weight: 300;
     font-style: italic;
     text-align: center;
+}
+
+.login{
+text-align: right;
 }

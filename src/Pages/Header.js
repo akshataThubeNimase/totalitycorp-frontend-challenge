@@ -1,7 +1,6 @@
 import React from "react";
-import '../Styles/Home.css';
-import logo from '../Images/logo.png'
-import { useNavigate } from 'react-router-dom';
+import '../Styles/Header.css';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FcCallback } from 'react-icons/fc';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 import { AiOutlineLogin } from 'react-icons/ai';
@@ -9,45 +8,35 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { FcAbout } from 'react-icons/fc';
 
 const Header = () => {
-    const navigate = useNavigate();
-    const routeChange = () =>{ 
-        let path = `../contact`; 
-        navigate(path);
-      }
-      const routeChange1 = () =>{ 
-          let path = `../cart`; 
-          navigate(path);
-        }
-        const routeChange2 = () =>{ 
-          let path = `../login`; 
-          navigate(path);
-        }
-        const routeChange3 = () =>{ 
-          let path = `../`; 
-          navigate(path);
-        }
-        const routeChange4 = () =>{ 
-          let path = `../about`; 
-          navigate(path);
-        }
-    return <>
+  const navigate = useNavigate();
+  const location = useLocation();
 
-      <nav className="main-nav">
-                <div className="logo">
-                    <h2>
-                    {/* <img src={logo} alt={"logo"}/>  */}
-                    <span style={{color:'red'}}>B</span>rand
-                    <span style={{color:'red'}}>F</span>actory
-                    </h2>
-                </div>
-                <div className="menu-item" onClick={routeChange3}><AiOutlineHome/>Home</div>
-                <div className="menu-item" onClick={routeChange4}><FcAbout/>About</div>
-                {/* <div className="menu-item" onClick={routeChange3}>Products<FcAbout/></div> */}
-                <div className="icon-item" onClick={routeChange}><FcCallback size={30} /></div>
-                <div className="icon-item" onClick={routeChange1}><BsFillCartPlusFill size={30} /></div>
-                <div className="icon-item" onClick={routeChange2}><AiOutlineLogin size={30} /></div>
-            </nav>
-    </>
-    
+  const handleRouteChange = (path) => {
+    navigate(path);
+    console.log('LocationData',location);
+  }
+
+  const isActive=(path)=>{
+     return location.pathname === path;
+  }
+
+  return <>
+
+    <nav className="row main-nav">
+      <div className="col-sm-1 col-md-3 col-lg-2 logo">
+        <h2>
+          <span style={{ color: 'red', fontWeight:500 }}>B</span>rand
+          <span style={{ color: 'red' }}>F</span>actory
+        </h2>
+      </div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/totalitycorp-frontend-challenge') ? 'white' : '' }} onClick={() => handleRouteChange('/totalitycorp-frontend-challenge')}> <AiOutlineHome size={30}/>    Home</div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/about') ? 'white' : '' }} onClick={() => handleRouteChange('/about')}>  <FcAbout size={30} />    About</div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/contact') ? 'white' : '' }} onClick={() => handleRouteChange('/contact')}>  <FcCallback size={30} />  Contact</div>
+      <div className="col-sm-1 col-md-1 col-lg-1 menu-item" style={{backgroundColor:isActive('/cart') ? 'white' : '' }} onClick={() => handleRouteChange('/cart')}><BsFillCartPlusFill size={30} />  Cart</div>
+      <div className="col-sm-1 col-md-2 col-lg-2"></div>
+      <div className="col-sm-1 col-md-1 col-lg-2 icon-item login" style={{backgroundColor:isActive('/login') ? 'white' : '' }} onClick={() => handleRouteChange('/login')}><AiOutlineLogin size={30} /></div>
+    </nav>
+  </>
+
 }
 export default Header;

@@ -1,13 +1,13 @@
 .login-container{
-border-width: 5px;
-background-color: white;
-border: 1px solid black;
-display: flex;
-max-width: fit-content;
-padding: 100px;
-margin-left: 500px;
-margin-top: 10px;
-box-shadow: 2px;
+    border-width: 5px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    max-width: fit-content;
+    margin:auto;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 2px;
 }
 .form-group{
     width: 400px;
